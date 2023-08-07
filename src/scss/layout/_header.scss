@@ -1,0 +1,48 @@
+@import 'base/mixins';
+@import 'base/variables';
+
+.header{
+    background-color: $verde;
+
+    h1{
+        color: $blanco;
+        text-align: center;    
+        @include tablet {
+            margin: 0;
+        }
+    }
+    .contenido-header{
+        padding: 2rem;
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+}
+
+.navegacion-principal{
+        @include tablet {
+            display: flex;
+            gap: 2rem;
+        }
+        a{
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: $blanco;
+            font-size: 2.5rem;
+            @include tablet {
+                margin: 0;
+            }
+
+            &:hover{
+                color:$Amarillo;
+            }
+           
+        }
+        
+}
+
+

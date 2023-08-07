@@ -1,0 +1,77 @@
+.actividades{
+    background-color: $rosado;
+    padding: 5rem 0;
+
+    h2, p {
+        text-align: center;
+        color: $blanco;  
+    }
+
+
+
+}
+.actividad{
+    padding-top: 1rem;
+    .nombre-escenario {
+        &:after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 20rem;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 2rem auto 0 auto;
+        }
+    }
+}
+.imgp .nombre-escenario:after {
+    background-image: url(../../../build/img/poncho.png);
+}
+.imgl .nombre-escenario:after {
+    background-image: url(../../../build/img/cat_lulu.png);
+}
+.contenedor-actividades{
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 3rem;
+    }
+}
+.lulu{
+    background-color: $verde;
+    margin: 0;
+    padding:0;
+    list-style: none;
+    
+    li:nth-child(odd){
+        background-color: darken($verde, 10%);
+    }
+}
+.poncho{
+    background-color: $Amarillo;
+    
+    li:nth-child(odd) {
+        background-color: darken($Amarillo, 10%);
+    }
+}
+.calendario{
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    list-style: none;
+    li {
+
+        padding: 2.5rem;
+        font-weight: 700;
+        span {
+            font-weight: 500;
+        }
+    }
+
+}
+
+.contenido-actividad{
+    display: flex;
+    flex-direction: column;
+}
